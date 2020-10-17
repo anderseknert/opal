@@ -6,3 +6,11 @@ capitalize(word) = r {
     rest := substring(word, 1, count(word) - 1)
 	r := concat("", [first, rest])
 }
+
+repeat(s, x) = r {
+    r := concat("", [p | numbers.range(0, x - 1)[_]; p := s])
+}
+
+char_at(str, pos) = r {
+    r = substring(str, pos, 1)
+}
