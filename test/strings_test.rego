@@ -33,3 +33,23 @@ test_char_at {
 	strings.char_at("abc", 1) == "b"
 	strings.char_at("abc", 2) == "c"
 }
+
+test_pad_left {
+	p1 := strings.pad_left("testing", 20, " ")
+	p1 == "             testing"
+	count(p1) == 20
+
+	p2 := strings.pad_left("testing", 4, " ")
+	p2 == "testing"
+	count(p2) == 7
+}
+
+test_pad_right {
+	p1 := strings.pad_right("testing", 20, " ")
+	p1 == "testing             "
+	count(p1) == 20
+
+	p2 := strings.pad_right("testing", 4, " ")
+	p2 == "testing"
+	count(p2) == 7
+}

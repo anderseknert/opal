@@ -13,3 +13,13 @@ test_keys {
 	objects.values({1: 1, 2: 2, 3: 3}) == [1, 2, 3]
 	objects.values({"å": "ä", "ä": "ö"}) == ["ö", "ä"]
 }
+
+test_put {
+	objects.put({"a": 1}, "b", 2) == {"a": 1, "b": 2}
+	objects.put({"a": 1}, "a", 2) == {"a": 2}
+}
+
+test_put_if_absent {
+	objects.put_if_absent({"a": 1}, "b", 2) == {"a": 1, "b": 2}
+	objects.put_if_absent({"a": 1}, "a", 2) == {"a": 1}
+}

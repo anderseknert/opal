@@ -17,7 +17,7 @@ ascii_alphanumeric := concat("", [digits, ascii_letters])
 capitalize(word) = r {
 	first := upper(substring(word, 0, 1))
 	rest := substring(word, 1, count(word) - 1)
-	r := concat("", [first, rest])
+	r := sprintf("%v%v", [first, rest])
 }
 
 # Repeated string s x number of times
@@ -33,4 +33,18 @@ lines(s) = r {
 # Returns the character from string s at position pos
 char_at(s, pos) = r {
 	r := substring(s, pos, 1)
+}
+
+# Pad provided string to the left with provided char up until length
+pad_left(s, length, char) = s {
+	count(s) >= length
+} else = r {
+	r := sprintf("%v%v", [repeat(char, length - count(s)), s])
+}
+
+# Pad provided string to the right with provided char up until length
+pad_right(s, length, char) = s {
+	count(s) >= length
+} else = r {
+	r := sprintf("%v%v", [s, repeat(char, length - count(s))])
 }
