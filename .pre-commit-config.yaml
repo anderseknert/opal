@@ -16,4 +16,5 @@ repos:
   hooks:
   - id: opa-fmt
   - id: opa-check
+    args: ['.']
   - id: opa-test
