@@ -1,6 +1,6 @@
 # Opal - the OPA not quite standard library
 
-Opal is a collection of common functions for OPA/Rego as found in the standard library of many popular programming languages. While OPA itself includes many useful built-ins and constructs for policy authoring, the provided "stdlib" is kept quite minimal. Opal aims to complement that with a batteries included package of functions recognizable from languages such as Python, Go or Java. While the library is ready to be used as it, it is just as much meant as an educational resource answering the occasional "how would I write function X in rego?" that may come up while authoring Rego policies.
+Opal is a collection of common functions for OPA/Rego as found in the standard library of many popular programming languages. While OPA itself includes many useful built-ins and constructs for policy authoring, the provided "stdlib" is kept quite minimal. Opal aims to complement that with a batteries included package of functions recognizable from languages such as Python, Go or Java. While the library is ready to be used as it, it is just as much meant as an educational resource answering the occasional "how would I write function X in rego?" that may come up while authoring Rego policies. Copy-pasting highly encouraged!
 
 ## Using Opal
 
@@ -30,6 +30,15 @@ Opal is a collection of common functions for OPA/Rego as found in the standard l
 | `lists.index_last `| Provides the position of last occurence of value `x` in list, or -1 if not found |
 | `lists.reverse(l)` | Reverse provided list |
 | `lists.count_value(l, v)` | Count the number of occurences of provided value `v` in list `l`|
+
+## Objects
+
+| Function | Description |
+|----------|-------------|
+| `objects.keys(o)` | Returns a list of (top level) keys in object `o` |
+| `objects.values(o)` | Returns a list of (top level) values in object `o` |
+| `objects.put(o, k, v)` | Return a new object with the provided key/value added (overwritten if exists) |
+| `objects.put_if_absent(o, k, v)` | Return a new object with the provided key/value added (if not exists) |
 
 ## Contributing
 
