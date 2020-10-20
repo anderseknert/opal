@@ -20,6 +20,16 @@ Opal is a collection of common functions for OPA/Rego as found in the standard l
 | `strings.pad_left(str, length, char)` | Pad `str` to the left with `char` up to `length` |
 | `strings.pad_right(str, length, char)` | Pad `str` to the right with `char` up to `length` |
 
+### Lists / Arrays
+
+| Function | Description |
+|----------|-------------|
+| `lists.append(l, x)` | Returns list `l` with value `x` appended (added last) |
+| `lists.insert(l, x, pos)` | Return list `l` with value `x` inserted at position `pos` |
+| `lists.index(l, x)` | Provides the position of first occurence of value `x` in list, or -1 if not found |
+| `lists.index_last `| Provides the position of last occurence of value `x` in list, or -1 if not found |
+| `lists.reverse(l)` | Reverse provided list |
+| `lists.count_value(l, v)` | Count the number of occurences of provided value `v` in list `l`|
 
 ## Contributing
 
