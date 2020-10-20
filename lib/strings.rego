@@ -21,13 +21,13 @@ capitalize(word) = r {
 }
 
 # Repeated string s x number of times
-repeat(s, x) = r {
-	r := concat("", [p | numbers.range(0, x - 1)[_]; p := s])
+repeat(str, x) = r {
+	r := concat("", [p | numbers.range(0, x - 1)[_]; p := str])
 }
 
 # Returns a list of lines from the provided string
-lines(s) = r {
-	r := split(s, "\n")
+lines(str) = r {
+	r := split(str, "\n")
 }
 
 # Returns the character from string s at position pos
