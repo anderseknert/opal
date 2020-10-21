@@ -27,10 +27,7 @@ index_last(l, x) = t[minus(count(t), 1)] {
 }
 
 # Reverse provided list
-reverse(l) = [x |
-		i := numbers.range(count(l) - 1, 0)[_]
-		x := l[i]
-	]
+reverse(l) = [l[j] | _ = l[i]; j := count(l)-1-i]
 
 # Count the number of occurences of provided value v in list l
 count_value(l, v) = count([1 | v == l[_]])
