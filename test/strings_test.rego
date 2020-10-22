@@ -7,7 +7,7 @@ test_capitalize {
 }
 
 # https://github.com/open-policy-agent/opa/issues/2799
-#strings.capitalize("åke") == "Åke"
+# strings.capitalize("åke") == "Åke"
 
 test_repeat {
 	strings.repeat("a", 3) == "aaa"

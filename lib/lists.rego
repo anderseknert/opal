@@ -4,11 +4,7 @@ package lists
 append(l, x) = array.concat(l, [x])
 
 # Returns a new list with item x inserted at position p of list l
-insert(l, x, p) = r {
-	first := array.slice(l, 0, p)
-	last := array.slice(l, p, count(l))
-	r := array.concat(array.concat(first, [x]), last)
-}
+insert(l, x, p) = array.concat(array.concat(array.slice(l, 0, p), [x]), array.slice(l, p, count(l)))
 
 # Return the index of the first occurence of item x, or -1 if not found
 index(l, x) = t[0] {
