@@ -19,6 +19,7 @@ Opal is a collection of common functions for OPA/Rego as found in the standard l
 | `strings.char_at(str, x)` | Get character from `str` at position `x` |
 | `strings.pad_left(str, length, char)` | Pad `str` to the left with `char` up to `length` |
 | `strings.pad_right(str, length, char)` | Pad `str` to the right with `char` up to `length` |
+| `strings.is_blank(str) | True if `str` is empty or contains only whitespace characters |
 
 ### Lists / Arrays
 

@@ -15,17 +15,10 @@ test_repeat {
 }
 
 test_lines {
-	text := `the
-rego
-policy
-language`
-
-	strings.lines(text) == [
-		"the",
-		"rego",
-		"policy",
-		"language",
-	]
+	strings.lines("the\nrego\npolicy\nlanguage") == ["the", "rego", "policy", "language"]
+	strings.lines("the\r\nrego\r\npolicy\r\nlanguage") == ["the", "rego", "policy", "language"]
+	strings.lines("the\nrego\r\npolicy\nlanguage") == ["the", "rego", "policy", "language"]
+	strings.lines("the\nrego\n\rpolicy\nlanguage") == ["the", "rego", "\rpolicy", "language"]
 }
 
 test_char_at {
@@ -52,4 +45,16 @@ test_pad_right {
 	p2 := strings.pad_right("testing", 4, " ")
 	p2 == "testing"
 	count(p2) == 7
+}
+
+test_is_blank {
+	strings.is_blank("")
+	strings.is_blank(" ")
+	strings.is_blank("\t")
+	strings.is_blank("\r")
+	strings.is_blank("\r\f")
+	strings.is_blank("\n")
+	strings.is_blank(`	`)
+	not strings.is_blank("a")
+	not strings.is_blank("\na\n")
 }

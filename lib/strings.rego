@@ -27,7 +27,7 @@ repeat(str, x) = r {
 
 # Returns a list of lines from the provided string
 lines(str) = r {
-	r := split(str, "\n")
+	r := regex.split(`\n|\r\n`, str)
 }
 
 # Returns the character from string s at position pos
@@ -48,3 +48,6 @@ pad_right(s, length, char) = s {
 } else = r {
 	r := sprintf("%v%v", [s, repeat(char, length - count(s))])
 }
+
+# True if string is empty or contains only whitespace characters
+is_blank(s) = regex.match(`^$|^\s+$`, s)
