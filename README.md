@@ -2,9 +2,14 @@
 
 Opal is a collection of common functions for OPA/Rego as found in the standard library of many popular programming languages. While OPA itself includes many useful built-ins and constructs for policy authoring, the provided "stdlib" is kept quite minimal. Opal aims to complement that with a batteries included package of functions recognizable from languages such as Python, Go or Java. While the library is ready to be used as it, it is just as much meant as an educational resource answering the occasional "how would I write function X in rego?" that may come up while authoring Rego policies. Copy-pasting highly encouraged!
 
+If you are rather looking for examples, policies and rules for working with systems like Kubernetes, Terraform or AWS, checkout the [Open Policy Agent Library](https://github.com/open-policy-agent/library).
+
 ## Using Opal
 
 1. `git clone` the repository and copy the `lib` directory to wherver you keep your Rego policies. Import and use.
+
+or
+
 2. Simply copy and paste the functions you may want to use into your policies and use them directly.
 
 ## Functions
@@ -19,7 +24,7 @@ Opal is a collection of common functions for OPA/Rego as found in the standard l
 | `strings.char_at(str, x)` | Get character from `str` at position `x` |
 | `strings.pad_left(str, length, char)` | Pad `str` to the left with `char` up to `length` |
 | `strings.pad_right(str, length, char)` | Pad `str` to the right with `char` up to `length` |
-| `strings.is_blank(str) | True if `str` is empty or contains only whitespace characters |
+| `strings.is_blank(str)` | True if `str` is empty or contains only whitespace characters |
 
 ### Lists / Arrays
 

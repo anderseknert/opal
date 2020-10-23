@@ -8,7 +8,7 @@ test_keys {
 	objects.keys({"å": "ä", "ä": "ö"}) == ["ä", "å"]
 }
 
-test_keys {
+test_values {
 	objects.values({"a": 1, "b": 2, "c": 3}) == [1, 2, 3]
 	objects.values({1: 1, 2: 2, 3: 3}) == [1, 2, 3]
 	objects.values({"å": "ä", "ä": "ö"}) == ["ö", "ä"]
