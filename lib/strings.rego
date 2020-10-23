@@ -20,7 +20,7 @@ capitalize(word) = sprintf("%v%v", [
 ])
 
 # Repeated string s x number of times
-repeat(str, x) = concat("", [p | numbers.range(0, x - 1)[_]; p := str])
+repeat(str, x) = concat("", [str | numbers.range(0, x - 1)[_]])
 
 # Returns a list of lines from the provided string
 lines(str) = regex.split(`\n|\r\n`, str)
