@@ -44,3 +44,9 @@ pad_right(s, length, char) = s {
 
 # True if string is empty or contains only whitespace characters
 is_blank(s) = regex.match(`^$|^\s+$`, s)
+
+# String starts with any item in list
+startswith_any(s, list) = startswith(s, list[_])
+
+# String ends with any item in list
+endswith_any(s, list) = endswith(s, list[_])

@@ -8,6 +8,6 @@ ceil(x) = x {
 
 floor(x) = round(x) {
 	round(x) == x
-} else = round(x - 0.51) {
+} else = ceil(x) - 1 {
 	true
 }
