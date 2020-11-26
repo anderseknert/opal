@@ -46,6 +46,13 @@ or
 | `objects.put(o, k, v)` | Return a new object with the provided key/value added (overwritten if exists) |
 | `objects.put_if_absent(o, k, v)` | Return a new object with the provided key/value added (if not exists) |
 
+## Math
+
+| Function | Description |
+|----------|-------------|
+| `math.ceil(x)` | Returns x rounded up to the closest integer |
+| `math.floor(x)` | Returns x rounded down to the closest integer |
+
 ## Contributing
 
 If you have a function you'd like to add, that's great! Just remember to submit a unit test or two along with your PR.
