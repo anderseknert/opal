@@ -58,3 +58,13 @@ test_is_blank {
 	not strings.is_blank("a")
 	not strings.is_blank("\na\n")
 }
+
+test_startswith_any {
+	strings.startswith_any("abba", ["b", "c", "a"])
+	not strings.startswith_any("abba", ["d", "c", "e"])
+}
+
+test_endswith_any {
+	strings.endswith_any("abba", ["b", "c", "a"])
+	not strings.endswith_any("abba", ["d", "c", "e"])
+}

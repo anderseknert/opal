@@ -25,6 +25,8 @@ or
 | `strings.pad_left(str, length, char)` | Pad `str` to the left with `char` up to `length` |
 | `strings.pad_right(str, length, char)` | Pad `str` to the right with `char` up to `length` |
 | `strings.is_blank(str)` | True if `str` is empty or contains only whitespace characters |
+| `strings.startswith_any(str, list)` | True if `str` starts with any item in `list` |
+| `strings.endswith_any(str, list)` | True if `str` ends with any item in `list` |
 
 ### Lists / Arrays
 
@@ -45,6 +47,13 @@ or
 | `objects.values(o)` | Returns a list of (top level) values in object `o` |
 | `objects.put(o, k, v)` | Return a new object with the provided key/value added (overwritten if exists) |
 | `objects.put_if_absent(o, k, v)` | Return a new object with the provided key/value added (if not exists) |
+
+## Math
+
+| Function | Description |
+|----------|-------------|
+| `math.ceil(x)` | Returns `x` rounded up to the closest integer |
+| `math.floor(x)` | Returns `x` rounded down to the closest integer |
 
 ## Contributing
 
