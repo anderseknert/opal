@@ -23,3 +23,9 @@ test_put_if_absent {
 	objects.put_if_absent({"a": 1}, "b", 2) == {"a": 1, "b": 2}
 	objects.put_if_absent({"a": 1}, "a", 2) == {"a": 1}
 }
+
+test_select {
+	objects.select({"a": {"b": {"c": 5}}}, "a.b.c") == 5
+	objects.select({"a": {"b": {"c": 5, "a": 1}}}, "a.b.a") == 1
+	objects.select({"a": {"b": {"c": 5, "a": 1}, "d": 10}}, "a.d") == 10
+}
