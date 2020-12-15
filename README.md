@@ -34,10 +34,10 @@ or
 |----------|-------------|
 | `lists.append(l, x)` | Returns list `l` with value `x` appended (added last) |
 | `lists.insert(l, x, pos)` | Return list `l` with value `x` inserted at position `pos` |
-| `lists.index(l, x)` | Provides the position of first occurence of value `x` in list, or -1 if not found |
-| `lists.index_last `| Provides the position of last occurence of value `x` in list, or -1 if not found |
+| `lists.index(l, x)` | Provides the position of first occurrence of value `x` in list, or -1 if not found |
+| `lists.index_last `| Provides the position of last occurrence of value `x` in list, or -1 if not found |
 | `lists.reverse(l)` | Reverse provided list |
-| `lists.count_value(l, v)` | Count the number of occurences of provided value `v` in list `l`|
+| `lists.count_value(l, v)` | Count the number of occurrences of provided value `v` in list `l`|
 
 ## Objects
 
@@ -47,6 +47,7 @@ or
 | `objects.values(o)` | Returns a list of (top level) values in object `o` |
 | `objects.put(o, k, v)` | Return a new object with the provided key/value added (overwritten if exists) |
 | `objects.put_if_absent(o, k, v)` | Return a new object with the provided key/value added (if not exists) |
+| `objects.select(o, path)` | Return the value at provided path (separated by '.') in nested object `o` |
 
 ## Math
 
