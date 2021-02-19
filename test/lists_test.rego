@@ -37,3 +37,7 @@ test_count_value {
 	lists.count_value([1, 2, 3], 1) == 1
 	lists.count_value(["a", "a", 1, "b", "a"], "a") == 3
 }
+
+test_zip {
+	lists.zip([1, 2, 3], [4, 5, 6]) == [[1, 4], [2, 5], [3, 6]]
+}

@@ -27,3 +27,7 @@ reverse(l) = [l[j] | _ = l[i]; j := (count(l) - 1) - i]
 
 # Count the number of occurences of provided value v in list l
 count_value(l, v) = count([1 | v == l[_]])
+
+# Creates tuples of items from each list
+# Example: zip([1, 2, 3], [4, 5, 6]) == [[1, 4], [2, 5], [3, 6]]
+zip(l1, l2) = [l | l := [l1[i], l2[i]]]
